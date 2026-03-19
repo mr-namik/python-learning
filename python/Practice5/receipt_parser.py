@@ -11,7 +11,7 @@ prices = [p.replace(" ", "") for p in prices]
 product_pattern = r"\d+\.\n([^\n]+)"
 products = re.findall(product_pattern, text)
 
-total_match = re.search(r"OWERALL:\s*\n?\s*([\d ]+,\d{2})", text)
+total_match = re.search(r"OVERALL:\s*\n?\s*([\d ]+,\d{2})", text)
 total = total_match.group(1) if total_match else None
 
 datetime_match = re.search(r"\d{2}\.\d{2}\.\d{4}\s\d{2}:\d{2}:\d{2}", text)
